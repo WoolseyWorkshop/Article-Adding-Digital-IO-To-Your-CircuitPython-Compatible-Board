@@ -29,7 +29,7 @@ Libraries/Modules
 - digitalio CircuitPython Core Module
     - https://circuitpython.readthedocs.io/en/latest/shared-bindings/digitalio/
     - Provides basic digital pin I/O support.
-- adafruit_74hc595 CircuitPython Device Library
+- Adafruit_CircuitPython_74HC595 CircuitPython Driver Library
     - https://circuitpython.readthedocs.io/projects/74hc595/
     - Provides support for 74HC595 shift register IC.
 
@@ -53,7 +53,7 @@ Author(s)
 ---------
 
 - Created by John Woolsey on 04/13/2021.
-- Modified by John Woolsey on 05/29/2021.
+- Modified by John Woolsey on 06/14/2021.
 
 Copyright (c) 2021 Woolsey Workshop.  All rights reserved.
 
@@ -63,10 +63,10 @@ Members
 
 
 # Imports
+from time import sleep
 import board
 import digitalio
 import adafruit_74hc595
-from time import sleep
 
 
 # Pin Mapping
@@ -248,3 +248,4 @@ def main():
 
 if __name__ == "__main__":  # required for generating Sphinx documentation
     main()
+
