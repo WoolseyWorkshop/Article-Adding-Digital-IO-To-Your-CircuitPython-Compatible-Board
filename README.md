@@ -21,7 +21,11 @@ A CircuitPython program that interfaces a 74HC165 shift register IC to add digit
 ### [Generic_74HC165 Schematic](Generic_74HC165)
 A KiCad schematic for a 74HC165 shift register IC, with an 8-position dip switch attached to the inputs, connected to a generic CircuitPython compatible board.
 
-## Part 3 - The MCP23017
+## [Part 3 - The MCP23017](https://www.woolseyworkshop.com/2021/07/28/adding-digital-io-to-your-circuitpython-compatible-board-part-3-the-mcp23017/)
 Teaches you how to add both digital inputs and outputs using the MCP23017 16-Bit I2C I/O Expander With Serial Interface IC.
 
-- Available soon.
+### [port_expander.py Program](port_expander.py)
+A CircuitPython program that interfaces an MCP23017 port expander IC to add digital inputs and outputs to a CircuitPython compatible board.
+
+### [Generic_MCP23017 Schematic](Generic_MCP23017)
+A KiCad schematic for a MCP23017 port expander IC, with an 8-position dip switch and 8 LEDs attached to its GPIO pins, connected to a generic CircuitPython compatible board.
