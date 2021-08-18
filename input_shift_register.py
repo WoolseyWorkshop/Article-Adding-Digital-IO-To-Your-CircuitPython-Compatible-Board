@@ -22,7 +22,7 @@ Libraries/Modules
 
 - time Standard Library
     - https://docs.python.org/3/library/time.html
-    - Access to time function.
+    - Access to monotonic function.
 - board CircuitPython Core Module
     - https://circuitpython.readthedocs.io/en/latest/shared-bindings/board/
     - Access to board's GPIO pins and hardware.
@@ -53,7 +53,7 @@ Author(s)
 ---------
 
 - Created by John Woolsey on 04/14/2021.
-- Modified by John Woolsey on 07/01/2021.
+- Modified by John Woolsey on 08/17/2021.
 
 Copyright (c) 2021 Woolsey Workshop.  All rights reserved.
 
@@ -63,7 +63,7 @@ Members
 
 
 # Imports
-from time import time
+import time
 import board
 import digitalio
 import wws_74hc165
@@ -206,9 +206,9 @@ def main():
     """Main program entry."""
 
     # Read and print inputs at the specified sampling rate
-    previous_time = time()  # time in seconds
+    previous_time = time.monotonic()  # time in seconds
     while True:
-        current_time = time()  # time in seconds
+        current_time = time.monotonic()  # time in seconds
         if current_time - previous_time >= 1.0 / SAMPLE_RATE:
             read_single_inputs()
             # read_inputs_with_binary_values()
